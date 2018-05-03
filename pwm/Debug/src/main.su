@@ -1,0 +1,6 @@
+main.cpp:47:6:void InitializeTimer(int)	32	static
+main.cpp:60:6:void InitializePWMChannel(int)	40	static
+main.cpp:74:6:void InitializeLEDs()	16	static
+main.cpp:85:5:int main()	16	static
+main.cpp:172:17:void EVAL_AUDIO_TransferComplete_CallBack(uint32_t, uint32_t)	16	static
+main.cpp:181:21:uint16_t EVAL_AUDIO_GetSampleCallBack()	4	static
