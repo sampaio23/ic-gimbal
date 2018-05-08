@@ -1,0 +1,597 @@
+!SESSION 2018-05-02 12:06:52.457 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-02 12:07:47.820
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-02 12:07:47.863
+!MESSAGE OS info: Windows 10, 10.0, x86
+
+!ENTRY TrueSTUDIO 1 0 2018-05-02 12:07:50.459
+!MESSAGE Target: STM32, Version: 9.0.0, Build date: 20180117-1023, Installation dir: /C:/Program Files (x86)/Atollic/TrueSTUDIO for STM32 9.0.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2018-05-02 12:07:50.469
+!MESSAGE Workspace: C:\Users\nicolas.oliveira\Atollic\TrueSTUDIO\STM32_workspace_9.0
+
+!ENTRY org.eclipse.jface 2 0 2018-05-02 12:07:54.367
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-05-02 12:07:54.367
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b711b6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b461b5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2018-05-02 12:08:07.150
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2018-05-02 12:08:07.260
+!MESSAGE Code Review is up.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-02 12:08:09.920
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\nicolas.oliveira'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.atollic.truestudio.common.wizards 4 0 2018-05-02 12:15:44.574
+!MESSAGE Failed to find the correct FPU ABI, falling back to Soft. Value: 
+
+!ENTRY com.atollic.truestudio.common.wizards 4 0 2018-05-02 12:15:47.394
+!MESSAGE Failed to find the correct FPU ABI, falling back to Soft. Value: 
+
+!ENTRY com.atollic.truestudio.common.wizards 4 0 2018-05-02 12:15:51.655
+!MESSAGE Failed to find the correct FPU ABI, falling back to Soft. Value: 
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.527
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.557
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.577
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.577
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.727
+!MESSAGE blink needs property 'com.atollic.truestudio.general.runtimelib.1857315399' fixed. Fixing to 'com.atollic.truestudio.ld.general.cclib.CCSmallCSmall'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.727
+!MESSAGE Failed to get device info (Debug) for project blink
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.737
+!MESSAGE Failed to get device info (Debug) for project blink
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.747
+!MESSAGE Failed to get device info (Debug) for project blink
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.747
+!MESSAGE Failed to get device info (Debug) for project blink
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.757
+!MESSAGE blink needs property 'com.atollic.truestudio.general.runtimelib.745129190' fixed. Fixing to 'com.atollic.truestudio.ld.general.cclib.CCSmallCSmall'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.767
+!MESSAGE Failed to get device info (Release) for project blink
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.767
+!MESSAGE Failed to get device info (Release) for project blink
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.777
+!MESSAGE Failed to get device info (Release) for project blink
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 12:16:02.787
+!MESSAGE Failed to get device info (Release) for project blink
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.847
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.857
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.867
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.877
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.987
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:02.997
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:43.598
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:44.008
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:44.488
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 12:16:44.958
+!MESSAGE Failed to find device info
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-02 12:17:03.946
+!MESSAGE Indexed 'blink' (38 sources, 148 headers) in 6,6 sec: 14.063 declarations; 38.544 references; 1 unresolved inclusions; 34 syntax errors; 2 unresolved names (0,0038%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-02 12:52:55.104
+!MESSAGE Indexed 'blink' (38 sources, 148 headers) in 4,06 sec: 14.063 declarations; 38.544 references; 1 unresolved inclusions; 34 syntax errors; 2 unresolved names (0,0038%)
+
+!ENTRY org.eclipse.ui 4 4 2018-05-02 12:55:32.461
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.TaskList.
+
+!ENTRY com.atollic.truestudio.common.wizards 4 0 2018-05-02 17:57:35.125
+!MESSAGE Failed to find the correct FPU ABI, falling back to Soft. Value: 
+
+!ENTRY com.atollic.truestudio.common.wizards 4 0 2018-05-02 17:57:37.353
+!MESSAGE Failed to find the correct FPU ABI, falling back to Soft. Value: 
+
+!ENTRY com.atollic.truestudio.common.wizards 4 0 2018-05-02 17:57:38.965
+!MESSAGE Failed to find the correct FPU ABI, falling back to Soft. Value: 
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:45.654
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:45.665
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:45.679
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:45.686
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.796
+!MESSAGE pwm needs property 'com.atollic.truestudio.general.runtimelib.596401087' fixed. Fixing to 'com.atollic.truestudio.ld.general.cclib.CCSmallCSmall'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.805
+!MESSAGE Failed to get device info (Debug) for project pwm
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.813
+!MESSAGE Failed to get device info (Debug) for project pwm
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.820
+!MESSAGE Failed to get device info (Debug) for project pwm
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.827
+!MESSAGE Failed to get device info (Debug) for project pwm
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.835
+!MESSAGE pwm needs property 'com.atollic.truestudio.general.runtimelib.129429785' fixed. Fixing to 'com.atollic.truestudio.ld.general.cclib.CCSmallCSmall'.
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.842
+!MESSAGE Failed to get device info (Release) for project pwm
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.850
+!MESSAGE Failed to get device info (Release) for project pwm
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.857
+!MESSAGE Failed to get device info (Release) for project pwm
+
+!ENTRY com.atollic.truestudio.mbs 2 0 2018-05-02 17:57:45.865
+!MESSAGE Failed to get device info (Release) for project pwm
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:45.921
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:45.930
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:45.941
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:45.948
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:46.033
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:46.041
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:51.300
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:57:51.657
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:58:14.120
+!MESSAGE Failed to find device info
+
+!ENTRY com.atollic.truestudio.mbs 4 0 2018-05-02 17:58:14.436
+!MESSAGE Failed to find device info
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-02 17:58:34.034
+!MESSAGE Indexed 'pwm' (38 sources, 148 headers) in 5,52 sec: 14.063 declarations; 38.544 references; 1 unresolved inclusions; 34 syntax errors; 2 unresolved names (0,0038%)
+
+!ENTRY com.atollic.hardwaredebug.launch 2 0 2018-05-02 18:54:45.197
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.121
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@1e5526f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.121
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.139
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@119ab9): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.139
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.158
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@1cc2f7f): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.159
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.172
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@477883): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.172
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.182
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@1abd3a8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.182
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.191
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@11548b6): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.191
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.206
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@19e2abc): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.206
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.223
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@86cc6c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.223
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.236
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@1817f07): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.236
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.252
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@6ec739): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.252
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.266
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@7dc1c2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.267
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.277
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@1c948d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.277
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.289
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@eda6ce): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.289
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.301
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@f0e3e5): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.301
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.310
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@8955a8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.310
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.324
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@b504c8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.324
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.338
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@1eb0c46): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.338
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.351
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@213d55): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.351
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 18:58:06.362
+!MESSAGE Request for monitor: 'RequestMonitor (com.atollic.truestudio.sfrview.ui.SfrView$4@e71d6c): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2018-05-02 18:58:06.363
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.503
+!MESSAGE Request for monitor: '37^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.503
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c00 x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.537
+!MESSAGE Request for monitor: '38^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.537
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c04 x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.552
+!MESSAGE Request for monitor: '39^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.552
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c08 x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.564
+!MESSAGE Request for monitor: '40^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.564
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c0c x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.574
+!MESSAGE Request for monitor: '41^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.574
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c10 x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.585
+!MESSAGE Request for monitor: '42^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.585
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c14 x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.598
+!MESSAGE Request for monitor: '43^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.598
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c1c x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.609
+!MESSAGE Request for monitor: '44^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.609
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c20 x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-05-02 19:05:10.618
+!MESSAGE Request for monitor: '45^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2018-05-02 19:05:10.618
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0x40020c24 x 1 1 4 y
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1021)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:850)
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-02 19:35:49.248
+!MESSAGE Unloading product manager
+!SESSION 2018-05-03 14:19:32.639 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-03 14:19:50.474
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-03 14:19:50.626
+!MESSAGE OS info: Windows 10, 10.0, x86
+
+!ENTRY TrueSTUDIO 1 0 2018-05-03 14:20:03.143
+!MESSAGE Target: STM32, Version: 9.0.0, Build date: 20180117-1023, Installation dir: /C:/Program Files (x86)/Atollic/TrueSTUDIO for STM32 9.0.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2018-05-03 14:20:03.162
+!MESSAGE Workspace: C:\Users\nicolas.oliveira\Atollic\TrueSTUDIO\STM32_workspace_9.0
+
+!ENTRY org.eclipse.jface 2 0 2018-05-03 14:20:19.756
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-05-03 14:20:19.756
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15ef20,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1390a96,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2018-05-03 14:20:53.688
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-03 14:20:54.433
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\nicolas.oliveira'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2018-05-03 14:20:56.000
+!MESSAGE Code Review is up.
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-03 21:18:30.923
+!MESSAGE Unloading product manager
+!SESSION 2018-05-07 20:46:30.326 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-07 20:49:25.084
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-07 20:49:25.264
+!MESSAGE OS info: Windows 10, 10.0, x86
+
+!ENTRY TrueSTUDIO 1 0 2018-05-07 20:49:35.642
+!MESSAGE Target: STM32, Version: 9.0.0, Build date: 20180117-1023, Installation dir: /C:/Program Files (x86)/Atollic/TrueSTUDIO for STM32 9.0.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2018-05-07 20:49:35.652
+!MESSAGE Workspace: C:\Users\nicolas.oliveira\Atollic\TrueSTUDIO\STM32_workspace_9.0
+
+!ENTRY org.eclipse.jface 2 0 2018-05-07 20:49:46.916
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-05-07 20:49:46.916
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@dbca45,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c34cd5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2018-05-07 20:50:09.887
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-07 20:50:10.747
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\nicolas.oliveira'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2018-05-07 20:50:11.057
+!MESSAGE Code Review is up.
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-08 00:50:51.897
+!MESSAGE Unloading product manager
+!SESSION 2018-05-08 11:18:06.646 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-08 11:18:25.190
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2018-05-08 11:18:25.281
+!MESSAGE OS info: Windows 10, 10.0, x86
+
+!ENTRY TrueSTUDIO 1 0 2018-05-08 11:18:36.189
+!MESSAGE Target: STM32, Version: 9.0.0, Build date: 20180117-1023, Installation dir: /C:/Program Files (x86)/Atollic/TrueSTUDIO for STM32 9.0.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2018-05-08 11:18:36.210
+!MESSAGE Workspace: C:\Users\nicolas.oliveira\Atollic\TrueSTUDIO\STM32_workspace_9.0
+
+!ENTRY org.eclipse.jface 2 0 2018-05-08 11:18:51.985
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-05-08 11:18:51.985
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@14964f2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f01a01,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-08 11:19:20.582
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\nicolas.oliveira'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2018-05-08 11:19:20.629
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2018-05-08 11:19:21.644
+!MESSAGE Code Review is up.

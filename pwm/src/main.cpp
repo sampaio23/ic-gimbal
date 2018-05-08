@@ -82,11 +82,58 @@ void InitializeLEDs(){
 	GPIO_Init(GPIOD, &gpioStructure);
 }
 
+void InitializeSPI(){
+
+
+}
+
 int main(void)
 {
 	InitializeLEDs();
 	InitializeTimer();
 	InitializePWMChannel(0);
+	InitializeSPI();
+
+	RCC_APB1PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1); //SCK
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1); //MISO
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1); //MOSI
+
+	//GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
+
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_OType=GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd=GPIO_PuPd_NOPULL;
+	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
+	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;
+	GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+	SPI_InitTypeDef spiInitStructure;
+
+	SPI_StructInit(&spiInitStructure);
+	spiInitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
+	spiInitStructure.SPI_Mode = SPI_Mode_Master;
+	spiInitStructure.SPI_DataSize = SPI_DataSize_8b;
+	spiInitStructure.SPI_CPOL = SPI_CPOL_High;
+	spiInitStructure.SPI_CPHA = SPI_CPHA_1Edge;
+	spiInitStructure.SPI_NSS = SPI_NSS_Soft;
+	//spiInitStructure.SPI_BaudRatePrescaler =
+	spiInitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
+	//spiInitStructure.SPI_CRCPolynomial =
+
+	SPI_Init(SPI1, &spiInitStructure);
+	//USART_Init(USART2, &USART_InitStructure);
+
+	SPI_Cmd(SPI1, ENABLE);
+	//USART_Cmd(USART2, ENABLE);
+	//USART_ReceiveData(USART2);
+
+	SPI_I2S_SendData(SPI1,0xF5);
+	uint16_t WHO_AM_I = SPI_I2S_ReceiveData(SPI1);
+
 	int j;
 
 	while(1){
