@@ -217,7 +217,7 @@ int main(void)
 
 		gravity = ((float)((int)ACCEL_Z))/((int)ACCEL_MAX)*2*9.81;
 
-		InitializePWMChannel((int)(40*gravity));
+		InitializePWMChannel((int)(30*gravity));
 
 	}
 	return 0;

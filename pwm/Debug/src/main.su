@@ -6,5 +6,5 @@ main.cpp:103:9:uint8_t mySPI_GetData(uint8_t)	16	static
 main.cpp:125:6:void mySPI_SendData(uint8_t, uint8_t)	16	static
 main.cpp:143:6:void InitializeSPI()	48	static
 main.cpp:194:5:int main()	32	static
-main.cpp:236:17:void EVAL_AUDIO_TransferComplete_CallBack(uint32_t, uint32_t)	16	static
-main.cpp:245:21:uint16_t EVAL_AUDIO_GetSampleCallBack()	4	static
+main.cpp:232:17:void EVAL_AUDIO_TransferComplete_CallBack(uint32_t, uint32_t)	16	static
+main.cpp:241:21:uint16_t EVAL_AUDIO_GetSampleCallBack()	4	static
