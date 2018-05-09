@@ -1,10 +1,10 @@
 main.cpp:47:6:void InitializeTimer(int)	32	static
 main.cpp:60:6:void InitializePWMChannel(int)	40	static
 main.cpp:75:6:void PonteHcontrol()	16	static
-main.cpp:92:6:void InitializeLEDs()	16	static
-main.cpp:103:9:uint8_t mySPI_GetData(uint8_t)	16	static
-main.cpp:125:6:void mySPI_SendData(uint8_t, uint8_t)	16	static
-main.cpp:143:6:void InitializeSPI()	48	static
-main.cpp:194:5:int main()	32	static
-main.cpp:232:17:void EVAL_AUDIO_TransferComplete_CallBack(uint32_t, uint32_t)	16	static
-main.cpp:241:21:uint16_t EVAL_AUDIO_GetSampleCallBack()	4	static
+main.cpp:93:6:void InitializeLEDs()	16	static
+main.cpp:104:9:uint8_t mySPI_GetData(uint8_t)	16	static
+main.cpp:126:6:void mySPI_SendData(uint8_t, uint8_t)	16	static
+main.cpp:144:6:void InitializeSPI()	48	static
+main.cpp:195:5:int main()	32	static
+main.cpp:234:17:void EVAL_AUDIO_TransferComplete_CallBack(uint32_t, uint32_t)	16	static
+main.cpp:243:21:uint16_t EVAL_AUDIO_GetSampleCallBack()	4	static

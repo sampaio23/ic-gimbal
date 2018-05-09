@@ -80,11 +80,12 @@ void PonteHcontrol(){
 	GPIO_InitStructure.GPIO_OType=GPIO_OType_PP;
 	GPIO_InitStructure.GPIO_PuPd=GPIO_PuPd_NOPULL;
 	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_9 | GPIO_Pin_11;
+	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_9 | GPIO_Pin_11 | GPIO_Pin_8;
 	GPIO_Init(GPIOD, &GPIO_InitStructure);
 
 	GPIO_SetBits(GPIOD, GPIO_Pin_11);
 	GPIO_ResetBits(GPIOD, GPIO_Pin_9);
+	GPIO_ResetBits(GPIOD, GPIO_Pin_8);
 
 }
 
@@ -217,7 +218,8 @@ int main(void)
 
 		gravity = ((float)((int)ACCEL_Z))/((int)ACCEL_MAX)*2*9.81;
 
-		InitializePWMChannel((int)(30*gravity));
+		InitializePWMChannel(500-(int)gravity*35);
+
 
 	}
 	return 0;
