@@ -595,3 +595,10 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2018-05-08 11:19:21.644
 !MESSAGE Code Review is up.
+
+!ENTRY TrueSTUDIO 4 0 2018-05-08 18:41:00.526
+!MESSAGE ST-Link GDB server failed to start (exit code = 2).
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2018-05-08 18:41:00.725
+!MESSAGE Error in initializing ST-Link device.
+Reason: (2) ST-Link DLL error.

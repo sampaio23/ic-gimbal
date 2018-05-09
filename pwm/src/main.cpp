@@ -58,6 +58,7 @@ void InitializeTimer(int period = 500){
 }
 
 void InitializePWMChannel(int brightness = 500){
+
 	TIM_OCInitTypeDef outputChannelInit = {0,};
 	outputChannelInit.TIM_OCMode = TIM_OCMode_PWM1;
 	outputChannelInit.TIM_Pulse = brightness;
@@ -71,6 +72,23 @@ void InitializePWMChannel(int brightness = 500){
 
 }
 
+void PonteHcontrol(){
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
+
+	GPIO_InitTypeDef GPIO_InitStructure;
+	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_OUT;
+	GPIO_InitStructure.GPIO_OType=GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd=GPIO_PuPd_NOPULL;
+	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
+	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_9 | GPIO_Pin_11;
+	GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+	GPIO_SetBits(GPIOD, GPIO_Pin_11);
+	GPIO_ResetBits(GPIOD, GPIO_Pin_9);
+
+}
+
+
 void InitializeLEDs(){
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 
@@ -82,10 +100,96 @@ void InitializeLEDs(){
 	GPIO_Init(GPIOD, &gpioStructure);
 }
 
+uint8_t mySPI_GetData(uint8_t adress){
+
+	GPIO_ResetBits(GPIOA, GPIO_Pin_15);
+
+	adress = 0x80 | adress;
+
+	while(!SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE)){}
+		SPI_I2S_SendData(SPI1, adress);
+
+	while(!SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE)){}
+		SPI_I2S_ReceiveData(SPI1); //Clear RXNE bit
+
+	while(!SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE)){}
+		SPI_I2S_SendData(SPI1, 0x00); //Dummy byte to generate clock
+
+	while(!SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE)){}
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_15);
+
+	return  SPI_I2S_ReceiveData(SPI1);
+}
+
+void mySPI_SendData(uint8_t adress, uint8_t data){
+
+	GPIO_ResetBits(GPIOA, GPIO_Pin_15);
+
+	while(!SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE));
+	SPI_I2S_SendData(SPI1, adress);
+	while(!SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE));
+	SPI_I2S_ReceiveData(SPI1);
+
+	while(!SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE));
+	SPI_I2S_SendData(SPI1, data);
+	while(!SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE));
+	SPI_I2S_ReceiveData(SPI1);
+
+	GPIO_SetBits(GPIOA, GPIO_Pin_15);
+}
+
+
 void InitializeSPI(){
 
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
+		RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+
+		//GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
+
+		GPIO_InitTypeDef GPIO_InitStructure;
+		GPIO_InitStructure.GPIO_Mode=GPIO_Mode_AF;
+		GPIO_InitStructure.GPIO_OType=GPIO_OType_PP;
+		GPIO_InitStructure.GPIO_PuPd=GPIO_PuPd_NOPULL;
+		GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
+		GPIO_InitStructure.GPIO_Pin=GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;
+		GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+		GPIO_InitTypeDef GPIO_InitStructureCS;
+		GPIO_InitStructureCS.GPIO_Mode=GPIO_Mode_OUT;
+		GPIO_InitStructureCS.GPIO_OType=GPIO_OType_PP;
+		GPIO_InitStructureCS.GPIO_PuPd=GPIO_PuPd_UP;
+		GPIO_InitStructureCS.GPIO_Speed=GPIO_Speed_50MHz;
+		GPIO_InitStructureCS.GPIO_Pin=GPIO_Pin_15;
+		GPIO_Init(GPIOA, &GPIO_InitStructureCS);
+
+		GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1); //SCK
+		GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1); //MISO
+		GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1); //MOSI
+
+		SPI_InitTypeDef spiInitStructure;
+
+		SPI_StructInit(&spiInitStructure);
+		spiInitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
+		spiInitStructure.SPI_Mode = SPI_Mode_Master;
+		spiInitStructure.SPI_DataSize = SPI_DataSize_8b;
+		spiInitStructure.SPI_CPOL = SPI_CPOL_Low;
+		spiInitStructure.SPI_CPHA = SPI_CPHA_1Edge;
+		spiInitStructure.SPI_NSS = SPI_NSS_Soft;
+		spiInitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_256;
+		spiInitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
+		//spiInitStructure.SPI_CRCPolynomial =
+
+		SPI_Init(SPI1, &spiInitStructure);
+			//USART_Init(USART2, &USART_InitStructure);
+		GPIO_SetBits(GPIOA, GPIO_Pin_15);
+		SPI_Cmd(SPI1, ENABLE);
+			//USART_Cmd(USART2, ENABLE);
+			//USART_ReceiveData(USART2);
 
 }
+
+#define ACCEL_MAX 32766
 
 int main(void)
 {
@@ -93,122 +197,31 @@ int main(void)
 	InitializeTimer();
 	InitializePWMChannel(0);
 	InitializeSPI();
+	PonteHcontrol();
+	uint8_t WHO_AM_I = 0x00;
+	uint16_t ACCEL_Z = 0x00;
+	uint8_t ACCEL_ZOUT_H;
+	uint8_t ACCEL_ZOUT_L;
+	uint8_t ACCEL_CONFIG;
+	float gravity = 0;
 
-	RCC_APB1PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource5, GPIO_AF_SPI1); //SCK
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1); //MISO
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1); //MOSI
-
-	//GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
-
-	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_AF;
-	GPIO_InitStructure.GPIO_OType=GPIO_OType_PP;
-	GPIO_InitStructure.GPIO_PuPd=GPIO_PuPd_NOPULL;
-	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
-	GPIO_InitStructure.GPIO_Pin=GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-	SPI_InitTypeDef spiInitStructure;
-
-	SPI_StructInit(&spiInitStructure);
-	spiInitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex;
-	spiInitStructure.SPI_Mode = SPI_Mode_Master;
-	spiInitStructure.SPI_DataSize = SPI_DataSize_8b;
-	spiInitStructure.SPI_CPOL = SPI_CPOL_High;
-	spiInitStructure.SPI_CPHA = SPI_CPHA_1Edge;
-	spiInitStructure.SPI_NSS = SPI_NSS_Soft;
-	//spiInitStructure.SPI_BaudRatePrescaler =
-	spiInitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
-	//spiInitStructure.SPI_CRCPolynomial =
-
-	SPI_Init(SPI1, &spiInitStructure);
-	//USART_Init(USART2, &USART_InitStructure);
-
-	SPI_Cmd(SPI1, ENABLE);
-	//USART_Cmd(USART2, ENABLE);
-	//USART_ReceiveData(USART2);
-
-	SPI_I2S_SendData(SPI1,0xF5);
-	uint16_t WHO_AM_I = SPI_I2S_ReceiveData(SPI1);
-
-	int j;
+	WHO_AM_I = mySPI_GetData(0x75);
+	WHO_AM_I++;
 
 	while(1){
 
-		for(int i=0;i<500;i++){
-			j = 20000;
-			InitializePWMChannel(i);
-			while(j--){}
-		}
+		ACCEL_ZOUT_H = mySPI_GetData(0x3F);
+		ACCEL_ZOUT_L = mySPI_GetData(0x40);
+		ACCEL_CONFIG = mySPI_GetData(0x1C);
+		ACCEL_Z = (ACCEL_ZOUT_H << 8) | (ACCEL_ZOUT_L & 0xFF);
+
+		gravity = ((float)((int)ACCEL_Z))/((int)ACCEL_MAX)*2*9.81;
+
+		InitializePWMChannel((int)(40*gravity));
 
 	}
 	return 0;
 
-/*
-	SysTick_Config(1000);
-
-	// Configurar GPIO dos Leds
-	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_StructInit (&GPIO_InitStructure);
-
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
-
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-	GPIO_Init (GPIOD, &GPIO_InitStructure);
-
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-	GPIO_Init (GPIOD, &GPIO_InitStructure);
-
-	GPIO_PinAFConfig (GPIOD, GPIO_PinSource12, GPIO_AF_TIM4);
-
-	RCC_ClocksTypeDef RCC_Clocks;
-	RCC_GetClocksFreq (&RCC_Clocks);
-	uint32_t multiplier;
-	if (RCC_Clocks.PCLK1_Frequency == RCC_Clocks.SYSCLK_Frequency) {
-		multiplier = 1;
-	  	 } else {
-	    multiplier = 2;
-	  }
-	uint32_t TIMER_Frequency = multiplier * RCC_Clocks.PCLK1_Frequency;
-	uint32_t COUNTER_Frequency = PWM_Steps*PWM_Frequency;
-	uint32_t PSC_Value = (TIMER_Frequency / COUNTER_Frequency)-1;
-	uint16_t ARR_Value = PWM_Steps - 1;
-
-	RCC_APB1PeriphClockCmd (RCC_APB1Periph_TIM4, ENABLE);
-	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
-	TIM_TimeBaseStructInit (&TIM_TimeBaseStructure);
-	TIM_TimeBaseStructure.TIM_Period = ARR_Value;
-	TIM_TimeBaseStructure.TIM_Prescaler = PSC_Value;
-	TIM_TimeBaseInit (TIM4, &TIM_TimeBaseStructure);
-
-	TIM_OCInitTypeDef  TIM_OCInitStructure;
-	TIM_OCStructInit (&TIM_OCInitStructure);
-
-	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
-	TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-	TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
-	TIM_OCInitStructure.TIM_Pulse = 0;
-	TIM_OC2Init (TIM4, &TIM_OCInitStructure);
-
-	TIM_Cmd(TIM4, ENABLE);
-
-	int brightness = 0;
-	int increment = 5;
-	while (1) {
-	    for (int i = 0; i < 20; i++) {
-	    	delay_ms (50);
-	    	brightness += increment;
-	    	TIM_SetCompare2 (TIM4, brightness);
-	    }
-	    increment = -increment;
-	    GPIO_ToggleBits(GPIOD,GPIO_Pin_13);
-	  }
-*/
 }
 
 
