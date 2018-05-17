@@ -1,0 +1,8 @@
+23:01:50 **** Incremental Build of configuration Debug for project Trabalho_2 ****
+Info: Internal Builder is used for build
+arm-atollic-eabi-g++ -o Trabalho_2.elf main.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../Debug_STM32F407VG_FLASH.ld -specs=nosys.specs -static -Wl,-cref,-u,Reset_Handler -Wl,-Map=Trabalho_2.map -Wl,--defsym=malloc_getpagesize_P=0x1000 -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group -specs=nano.specs 
+c:/program files (x86)/atollic/truestudio for stm32 9.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/bin/ld.exe:../Debug_STM32F407VG_FLASH.ld:57: syntax error
+collect2.exe: error: ld returned 1 exit status
+
+23:01:50 Build Finished (took 340ms)
+

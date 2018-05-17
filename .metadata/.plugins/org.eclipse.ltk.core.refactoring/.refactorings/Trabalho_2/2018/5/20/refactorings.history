@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Trabalho_2/script.ld&apos; to &apos;Debug_STM32F407VG_FLASH.ld&apos;" description="Rename resource &apos;script.ld&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="script.ld" name="Debug_STM32F407VG_FLASH.ld" stamp="1526349597453" updateReferences="true"/>
+</session>

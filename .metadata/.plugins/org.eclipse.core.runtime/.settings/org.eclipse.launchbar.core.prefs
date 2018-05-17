@@ -1,7 +1,9 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:pwm.elf
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Aula4_2.launch,org.eclipse.launchbar.core.descriptorType.default\:Aula4_2 Debug,org.eclipse.launchbar.core.descriptorType.default\:Aula4_2.elf,org.eclipse.launchbar.core.descriptorType.default\:pwm.elf
 eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:PrimeiroProgramaC.elf/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:PrimeiroProgramaC.elf/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:blink.elf/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:blink.elf/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:pwm.elf/activeLaunchMode=debug

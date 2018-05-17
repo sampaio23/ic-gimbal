@@ -1,0 +1,182 @@
+
+Trabalho_2.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .init         0000000c  00008000  00008000  00008000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .text         0000009c  0000800c  0000800c  0000800c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .fini         0000000c  000080a8  000080a8  000080a8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .vetor        00000008  000080b4  000080b4  000080b4  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .eh_frame     00000004  000080bc  000080bc  000080bc  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .init_array   00000004  000180c0  000180c0  000080c0  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .fini_array   00000004  000180c4  000180c4  000080c4  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .data         00000004  000180c8  000180c8  000080c8  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  8 .bss          0000001c  000180cc  000180cc  000080cc  2**2
+                  ALLOC
+  9 .debug_aranges 00000020  00000000  00000000  000080d0  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_info   0000007d  00000000  00000000  000080f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_abbrev 00000014  00000000  00000000  0000816d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_line   0000005c  00000000  00000000  00008181  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .ARM.attributes 00000030  00000000  00000000  000081dd  2**0
+                  CONTENTS, READONLY
+
+Disassembly of section .init:
+
+00008000 <_init>:
+    8000:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    8002:	bf00      	nop
+    8004:	bcf8      	pop	{r3, r4, r5, r6, r7}
+    8006:	bc08      	pop	{r3}
+    8008:	469e      	mov	lr, r3
+    800a:	4770      	bx	lr
+
+Disassembly of section .text:
+
+0000800c <__do_global_dtors_aux>:
+    800c:	b510      	push	{r4, lr}
+    800e:	4c05      	ldr	r4, [pc, #20]	; (8024 <__do_global_dtors_aux+0x18>)
+    8010:	7823      	ldrb	r3, [r4, #0]
+    8012:	b933      	cbnz	r3, 8022 <__do_global_dtors_aux+0x16>
+    8014:	4b04      	ldr	r3, [pc, #16]	; (8028 <__do_global_dtors_aux+0x1c>)
+    8016:	b113      	cbz	r3, 801e <__do_global_dtors_aux+0x12>
+    8018:	4804      	ldr	r0, [pc, #16]	; (802c <__do_global_dtors_aux+0x20>)
+    801a:	f3af 8000 	nop.w
+    801e:	2301      	movs	r3, #1
+    8020:	7023      	strb	r3, [r4, #0]
+    8022:	bd10      	pop	{r4, pc}
+    8024:	000180cc 	.word	0x000180cc
+    8028:	00000000 	.word	0x00000000
+    802c:	000080bc 	.word	0x000080bc
+
+00008030 <frame_dummy>:
+    8030:	b508      	push	{r3, lr}
+    8032:	4b03      	ldr	r3, [pc, #12]	; (8040 <frame_dummy+0x10>)
+    8034:	b11b      	cbz	r3, 803e <frame_dummy+0xe>
+    8036:	4903      	ldr	r1, [pc, #12]	; (8044 <frame_dummy+0x14>)
+    8038:	4803      	ldr	r0, [pc, #12]	; (8048 <frame_dummy+0x18>)
+    803a:	f3af 8000 	nop.w
+    803e:	bd08      	pop	{r3, pc}
+    8040:	00000000 	.word	0x00000000
+    8044:	000180d0 	.word	0x000180d0
+    8048:	000080bc 	.word	0x000080bc
+
+0000804c <inicio>:
+	.section .text.inicio
+	.weak inicio
+	.type inicio, %function
+
+inicio:
+	ldr r6, = 40023800 + 0x30
+    804c:	4e0f      	ldr	r6, [pc, #60]	; (808c <delay2+0x8>)
+	mov r0, 0x08
+    804e:	f04f 0008 	mov.w	r0, #8
+	str r0, [r6]
+    8052:	6030      	str	r0, [r6, #0]
+
+	//pino no modo output
+	ldr r6, = 0x40020C00 + 0x00
+    8054:	4e0e      	ldr	r6, [pc, #56]	; (8090 <delay2+0xc>)
+	ldr r0, = 0x01000000
+    8056:	f04f 7080 	mov.w	r0, #16777216	; 0x1000000
+	str r0, [r6]
+    805a:	6030      	str	r0, [r6, #0]
+
+	//config pino output push-pull
+	ldr r6, = 0x40020C00 + 0x04
+    805c:	4e0d      	ldr	r6, [pc, #52]	; (8094 <delay2+0x10>)
+	ldr r6, = 0x00000000
+    805e:	2600      	movs	r6, #0
+	str r0, [r6]
+    8060:	6030      	str	r0, [r6, #0]
+
+	//speed low
+	ldr r6, = 0x40020C00 + 0x08
+    8062:	4e0d      	ldr	r6, [pc, #52]	; (8098 <delay2+0x14>)
+	ldr r6, = 0x00000000
+    8064:	2600      	movs	r6, #0
+	str r0, [r6]
+    8066:	6030      	str	r0, [r6, #0]
+
+	//no pull-up, pull-down
+	ldr r6, = 0x40020C00 + 0x0C
+    8068:	4e0c      	ldr	r6, [pc, #48]	; (809c <delay2+0x18>)
+	ldr r6, = 0x00000000
+    806a:	2600      	movs	r6, #0
+	str r0, [r6]
+    806c:	6030      	str	r0, [r6, #0]
+
+	mov r2, 0x1000
+    806e:	f44f 5280 	mov.w	r2, #4096	; 0x1000
+	mov r3, 0x0000
+    8072:	f04f 0300 	mov.w	r3, #0
+	ldr r6, = 0x40020C00 + 0x14
+    8076:	4e0a      	ldr	r6, [pc, #40]	; (80a0 <delay2+0x1c>)
+
+00008078 <loop>:
+
+loop:
+	str r2, [r6]
+    8078:	6032      	str	r2, [r6, #0]
+	ldr r1, =800000
+    807a:	490a      	ldr	r1, [pc, #40]	; (80a4 <delay2+0x20>)
+
+0000807c <delay1>:
+
+delay1:
+	subs r1, 1
+    807c:	3901      	subs	r1, #1
+	bne delay1
+    807e:	d1fd      	bne.n	807c <delay1>
+
+	str r3, [r6]
+    8080:	6033      	str	r3, [r6, #0]
+	ldr r1, =800000
+    8082:	4908      	ldr	r1, [pc, #32]	; (80a4 <delay2+0x20>)
+
+00008084 <delay2>:
+
+delay2:
+	subs r1, 1
+    8084:	3901      	subs	r1, #1
+	bne delay2
+    8086:	d1fd      	bne.n	8084 <delay2>
+
+	b loop
+    8088:	e7f6      	b.n	8078 <loop>
+    808a:	0000      	.short	0x0000
+	ldr r6, = 40023800 + 0x30
+    808c:	0262b728 	.word	0x0262b728
+	ldr r6, = 0x40020C00 + 0x00
+    8090:	40020c00 	.word	0x40020c00
+	ldr r6, = 0x40020C00 + 0x04
+    8094:	40020c04 	.word	0x40020c04
+	ldr r6, = 0x40020C00 + 0x08
+    8098:	40020c08 	.word	0x40020c08
+	ldr r6, = 0x40020C00 + 0x0C
+    809c:	40020c0c 	.word	0x40020c0c
+	ldr r6, = 0x40020C00 + 0x14
+    80a0:	40020c14 	.word	0x40020c14
+	ldr r1, =800000
+    80a4:	000c3500 	.word	0x000c3500
+
+Disassembly of section .fini:
+
+000080a8 <_fini>:
+    80a8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    80aa:	bf00      	nop
+    80ac:	bcf8      	pop	{r3, r4, r5, r6, r7}
+    80ae:	bc08      	pop	{r3}
+    80b0:	469e      	mov	lr, r3
+    80b2:	4770      	bx	lr
